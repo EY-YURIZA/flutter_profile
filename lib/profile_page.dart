@@ -19,31 +19,56 @@ class ProfilePage extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            const CircleAvatar(
-              radius: 50,
-              backgroundColor: Colors.black12,
-              child: Icon(Icons.face, size: 50, color: Colors.teal),
-            ),
-            const SizedBox(height: 16), // prbaikin code bug ny: width diubah ke height
-            Column(
-              children: [
-                Text(
-                  userName,
-                  style: const TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  role,
-                  style: TextStyle(fontSize: 16, color: Colors.grey[700]),
-                ),
-              ],
-            ),
+            const ProfileAvatar(),
+            const SizedBox(height: 16),
+            ProfileInfo(name: userName, role: role),
           ],
         ),
       ),
+    );
+  }
+}
+
+class ProfileAvatar extends StatelessWidget {
+  const ProfileAvatar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const CircleAvatar(
+      radius: 50,
+      backgroundColor: Colors.black12,
+      child: Icon(Icons.face, size: 50, color: Colors.teal),
+    );
+  }
+}
+
+class ProfileInfo extends StatelessWidget {
+  final String name;
+  final String role;
+
+  const ProfileInfo({
+    super.key,
+    required this.name,
+    required this.role,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          name,
+          style: const TextStyle(
+            fontSize: 22,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          role,
+          style: TextStyle(fontSize: 16, color: Colors.grey[700]),
+        ),
+      ],
     );
   }
 }
