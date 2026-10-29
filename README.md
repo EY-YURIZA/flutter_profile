@@ -11,3 +11,13 @@
 * **Keterangan & Perbaikan:**
   * Memecah UI menjadi custom widget `ProfileAvatar` dan `ProfileInfo`.
   * Menerapkan parameter passing data (`name` dan `role`).
+
+---
+
+  ## Hari 2: Komponen Statistik Profil
+
+### Pagi
+* **Commit:** `feat: add profile statistics row`
+* **Keterangan & Perbaikan:**
+  * Menambahkan baris statistik (Proyek, Followers, Following) dan tombol Edit.
+  * **Fix:** Mengubah angka integer `42` menjadi String `'42'` pada `StatItem` agar tidak error.

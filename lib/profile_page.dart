@@ -22,6 +22,65 @@ class ProfilePage extends StatelessWidget {
             const ProfileAvatar(),
             const SizedBox(height: 16),
             ProfileInfo(name: userName, role: role),
+            const SizedBox(height: 24),
+            ElevatedButton.icon(
+              onPressed: () {},
+              icon: const Icon(Icons.edit),
+              label: const Text('Edit Profil'),
+            ),
+            const SizedBox(height: 24),
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 12),
+              decoration: BoxDecoration(
+                color: Colors.teal[50],
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      const Text(
+                        '15',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.teal,
+                        ),
+                      ),
+                      Text('Proyek', style: TextStyle(color: Colors.grey[600])),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      const Text(
+                        '1.2K',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.teal,
+                        ),
+                      ),
+                      Text('Followers', style: TextStyle(color: Colors.grey[600])),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      // Perbaikan bug: angka 42 diubah ke String '42'
+                      const Text(
+                        '42',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.teal,
+                        ),
+                      ),
+                      Text('Following', style: TextStyle(color: Colors.grey[600])),
+                    ],
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
