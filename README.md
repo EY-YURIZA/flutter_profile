@@ -21,3 +21,8 @@
 * **Keterangan & Perbaikan:**
   * Menambahkan baris statistik (Proyek, Followers, Following) dan tombol Edit.
   * **Fix:** Mengubah angka integer `42` menjadi String `'42'` pada `StatItem` agar tidak error.
+
+  ### Malam
+* **Commit:** `refactor: extract statistics UI into ProfileStats and StatItem widgets`
+* **Keterangan & Perbaikan:**
+  * Mengekstrak baris statistik menjadi widget terpisah `ProfileStats` dan `StatItem` agar *reusable*.
