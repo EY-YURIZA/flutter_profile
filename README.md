@@ -26,3 +26,15 @@
 * **Commit:** `refactor: extract statistics UI into ProfileStats and StatItem widgets`
 * **Keterangan & Perbaikan:**
   * Mengekstrak baris statistik menjadi widget terpisah `ProfileStats` dan `StatItem` agar *reusable*.
+
+
+  ---
+
+## Hari 3: Daftar Pengalaman (ListView)
+
+### Pagi
+* **Commit:** `feat: add scrollable experience list using ListView.builder`
+* **Keterangan & Perbaikan:**
+  * Menampilkan daftar pengalaman kerja menggunakan `ListView.builder`.
+  * **Fix:** Menambahkan tanda koma (`,`) yang hilang pada array data `experiences`.
+  * **Fix:** Membungkus `ListView.builder` dengan widget `Expanded` agar tidak terjadi error *layout overflow*.
