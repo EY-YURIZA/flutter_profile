@@ -7,7 +7,7 @@
   * **Fix:** Mengubah `SizedBox(width: 16)` menjadi `SizedBox(height: 16)` karena disusun secara vertikal (`Column`).
 
 ### Malam
-* **Commit:** `refactor: extract avatar and info into custom widgets`
+
 * **Keterangan & Perbaikan:**
   * Memecah UI menjadi custom widget `ProfileAvatar` dan `ProfileInfo`.
   * Menerapkan parameter passing data (`name` dan `role`).
@@ -17,13 +17,13 @@
   ## Hari 2: Komponen Statistik Profil
 
 ### Pagi
-* **Commit:** `feat: add profile statistics row`
+
 * **Keterangan & Perbaikan:**
   * Menambahkan baris statistik (Proyek, Followers, Following) dan tombol Edit.
   * **Fix:** Mengubah angka integer `42` menjadi String `'42'` pada `StatItem` agar tidak error.
 
   ### Malam
-* **Commit:** `refactor: extract statistics UI into ProfileStats and StatItem widgets`
+
 * **Keterangan & Perbaikan:**
   * Mengekstrak baris statistik menjadi widget terpisah `ProfileStats` dan `StatItem` agar *reusable*.
 
@@ -33,7 +33,7 @@
 ## Hari 3: Daftar Pengalaman (ListView)
 
 ### Pagi
-* **Commit:** `feat: add scrollable experience list using ListView.builder`
+
 * **Keterangan & Perbaikan:**
   * Menampilkan daftar pengalaman kerja menggunakan `ListView.builder`.
   * **Fix:** Menambahkan tanda koma (`,`) yang hilang pada array data `experiences`.
