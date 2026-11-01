@@ -28,7 +28,7 @@
   * Mengekstrak baris statistik menjadi widget terpisah `ProfileStats` dan `StatItem` agar *reusable*.
 
 
-  ---
+---
 
 ## Hari 3: Daftar Pengalaman (ListView)
 
@@ -38,3 +38,8 @@
   * Menampilkan daftar pengalaman kerja menggunakan `ListView.builder`.
   * **Fix:** Menambahkan tanda koma (`,`) yang hilang pada array data `experiences`.
   * **Fix:** Membungkus `ListView.builder` dengan widget `Expanded` agar tidak terjadi error *layout overflow*.
+
+  ### Malam
+
+* **Keterangan & Perbaikan:**
+  * Mengekstrak item list pengalaman menjadi custom widget `ExperienceCard`.
