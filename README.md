@@ -55,6 +55,6 @@
   * Mengonversi `ProfilePage` dari `StatelessWidget` menjadi `StatefulWidget` agar data nama bisa diubah-ubah.
 
 ### Malam
-* **Keterangan & Perbaikan:**
-  * Menambahkan fungsi pada tombol Edit Profil untuk memunculkan `AlertDialog`.
-  * Menerapkan `setState()` agar nama di layar langsung berubah setelah disimpan.
+* *Keterangan & Perbaikan:*
+  * Menambahkan fungsi pada tombol Edit Profil untuk memunculkan AlertDialog.
+  * Menerapkan setState() agar nama di layar langsung berubah setelah disimpan.

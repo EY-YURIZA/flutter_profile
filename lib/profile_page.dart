@@ -35,7 +35,34 @@ class _ProfilePageState extends State<ProfilePage> {
             ProfileInfo(name: userName, role: role),
             const SizedBox(height: 24),
             ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) {
+                    TextEditingController nameController =
+                        TextEditingController(text: userName);
+                    return AlertDialog(
+                      title: const Text('Edit Nama'),
+                      content: TextField(controller: nameController),
+                      actions: [
+                        TextButton(
+                          onPressed: () => Navigator.pop(context),
+                          child: const Text('Batal'),
+                        ),
+                        ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              userName = nameController.text;
+                            });
+                            Navigator.pop(context);
+                          },
+                          child: const Text('Simpan'),
+                        ),
+                      ],
+                    );
+                  },
+                );
+              },
               icon: const Icon(Icons.edit),
               label: const Text('Edit Profil'),
             ),
