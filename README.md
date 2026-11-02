@@ -43,3 +43,18 @@
 
 * **Keterangan & Perbaikan:**
   * Mengekstrak item list pengalaman menjadi custom widget `ExperienceCard`.
+
+
+---
+
+## Hari 4: Interaktivitas & State Management
+
+### Pagi
+
+* **Keterangan & Perbaikan:**
+  * Mengonversi `ProfilePage` dari `StatelessWidget` menjadi `StatefulWidget` agar data nama bisa diubah-ubah.
+
+### Malam
+* **Keterangan & Perbaikan:**
+  * Menambahkan fungsi pada tombol Edit Profil untuk memunculkan `AlertDialog`.
+  * Menerapkan `setState()` agar nama di layar langsung berubah setelah disimpan.

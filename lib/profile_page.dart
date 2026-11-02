@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatelessWidget {
-  ProfilePage({super.key});
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({super.key});
 
-  final String userName = 'Aditya Ramadhan Khiang';
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  String userName = 'Aditya Ramadhan Khiang';
   final String role = 'Software Engineer Student';
   final List<String> experiences = [
-    'Manajemen HRD - Java Swing',
-    'POS Warteg - Java OOP',
+    'Flutter Profile',
+    'Mosque Financial Report - Web',
     'Smart Agriculture IoT - Web', // Perbaikan bug: koma ditambahkan
     'Crypto Bot - Python',
   ];
@@ -45,19 +50,11 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
             const Divider(),
-            // Perbaikan bug: dibungkus Expanded agar tidak Overflow
             Expanded(
               child: ListView.builder(
                 itemCount: experiences.length,
                 itemBuilder: (context, index) {
-                  return Card(
-                    elevation: 2,
-                    margin: const EdgeInsets.symmetric(vertical: 6),
-                    child: ListTile(
-                      leading: const Icon(Icons.work, color: Colors.teal),
-                      title: Text(experiences[index]),
-                    ),
-                  );
+                  return ExperienceCard(title: experiences[index]);
                 },
               ),
             ),
@@ -163,6 +160,27 @@ class StatItem extends StatelessWidget {
           style: TextStyle(color: Colors.grey[600]),
         ),
       ],
+    );
+  }
+}
+
+class ExperienceCard extends StatelessWidget {
+  final String title;
+
+  const ExperienceCard({super.key, required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 2,
+      margin: const EdgeInsets.symmetric(vertical: 6),
+      child: ListTile(
+        leading: const Icon(Icons.work_history, color: Colors.teal),
+        title: Text(
+          title,
+          style: const TextStyle(fontWeight: FontWeight.w500),
+        ),
+      ),
     );
   }
 }
